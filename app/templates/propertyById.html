@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block main %}
+<div>
+    <div class = 'row'>
+        <div class = "col-md-4 no-gutters">
+            <img class="col-md-12" style="height:100%" src="{{ url_for('get_image', filename=properties.photo) }}" alt="Card image cap">
+        </div>
+        <div class ="col-md-8">
+            <div class = "card-body">
+                <h5 class = "card-title font-weight-bold">{{properties.title}}</h5>
+                <div class ="row">
+                    <div class = "col-sm-2">
+                        <p class="card-title font-weight-bold"> ${{ properties.price }}</p>
+                    </div>
+                    <div class = "col-sm-1">
+                        <p class ="badge badge-pill badge-warning p-2">{{ properties.prop_type }}</p>
+                    </div>
+                </div>
+                <p class ="card-text">{{ properties.location }}</p>
+                <div class ="row">
+                    <div class = "col-md-4">
+                        <p class ="card-text">{{ properties.bedrooms }} Bedrooms</p>
+                    </div>
+                    <div class = "col-md-4">
+                        <p class ="card-text">{{ properties.bathrooms }} Bathrooms</p>     
+                    </div>
+                </div>
+                <p class ="card-text">{{ properties.description }}</p>
+                <button type="Submit" class="btn btn-primary">Email Realtor</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+

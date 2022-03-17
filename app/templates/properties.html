@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block main %}
+<h1>Properties</h1>
+<div class = 'row row-cols-3 row-cols-md-4'>
+    {% for property in properties %}
+    <div class = "col-md-4 mb-3">
+        <div class ="card h-100">
+            <img class = "card-img-top" src="{{ url_for('get_image', filename=property.photo) }}" alt="Card image cap">
+                <div class = "card-body">
+                    <h5 class="card-title">{{ property.title }}</h5>
+                    <p class ="card-subtitle mb-3 text-muted">{{ property.description }}</p>
+                    <p class="card-subtitle mb-3 text-muted">${{ property.price }}</p>
+                </div>
+                <a href="{{ url_for('propertyById', propertyid=property.id) }}">
+                    <div class = "card-footer bg-primary_ test text-center">
+                        View Property
+                    </div>
+                </a>
+        </div>
+    </div>
+    {% endfor %}
+</div> 
+{% endblock %}
