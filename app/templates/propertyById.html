@@ -11,23 +11,23 @@
                 <h5 class = "card-title font-weight-bold">{{properties.title}}</h5>
                 <div class ="row">
                     <div class = "col-sm-2">
-                        <p class="card-title font-weight-bold"> ${{ properties.price }}</p>
+                        <p class="badge badge-pill badge-primary p-2"> ${{ properties.price }}</p>
                     </div>
                     <div class = "col-sm-1">
-                        <p class ="badge badge-pill badge-warning p-2">{{ properties.prop_type }}</p>
+                        <p class ="badge badge-pill badge-warning text-light p-2">{{ properties.prop_type }}</p>
                     </div>
                 </div>
                 <p class ="card-text">{{ properties.location }}</p>
                 <div class ="row">
                     <div class = "col-md-4">
-                        <p class ="card-text">{{ properties.bedrooms }} Bedrooms</p>
+                        <p class ="card-text"><img class ="image mr-2" src="{{ url_for('static', filename='img/bed.png') }}"></img>{{ properties.bedrooms }} Bedrooms</p>
                     </div>
                     <div class = "col-md-4">
-                        <p class ="card-text">{{ properties.bathrooms }} Bathrooms</p>     
+                        <p class ="card-text"><img class ="image mr-2" src="{{ url_for('static', filename='img/shower.png') }}"></img>{{ properties.bathrooms }} Bathrooms</p>     
                     </div>
                 </div>
-                <p class ="card-text">{{ properties.description }}</p>
-                <button type="Submit" class="btn btn-primary">Email Realtor</button>
+                <p class ="card-text"><img class ="image mr-1" src="{{ url_for('static', filename='img/location.png') }}">{{ properties.description }}</p>
+                <button type="Submit" class="bg-primary_ test">Email Realtor</button>
             </div>
         </div>
     </div>

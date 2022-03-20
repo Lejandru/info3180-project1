@@ -7,14 +7,14 @@
             <div class="form-group">
                 {{ form.title.label }} {{ form.title(class="form-control") }}
             </div>
+            <div class ="form-group">
+                {{ form.description.label}} {{ form.description(class="form-control")}}
+            </div>
             <div class="form-group">
                 {{ form.bedrooms.label }} {{ form.bedrooms(class="form-control") }}
             </div>
             <div class="form-group">
                 {{ form.bathrooms.label }} {{ form.bathrooms(class="form-control") }}
-            </div>
-            <div class ="form-group">
-                {{ form.location.label }} {{ form.location(class="form-control") }}
             </div>
             <div class ="form-group">
                 {{ form.price.label }} {{ form.price(class="form-control") }}
@@ -23,7 +23,7 @@
                 {{ form.prop_type.label}} {{ form.prop_type(class="form-control")}}
             </div>
             <div class ="form-group">
-                {{ form.description.label}} {{ form.description(class="form-control")}}
+                {{ form.location.label }} {{ form.location(class="form-control") }}
             </div>
             <div class="form-group">
                 {{ form.imageFile() }}
